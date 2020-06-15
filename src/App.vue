@@ -4,17 +4,18 @@
       <div id="home">
         <router-link to="/">Hieroglyphics</router-link>
       </div>
-      <div>
+
+      <div id="follow">
         <router-link to="/follow">Follow</router-link>
       </div>
 
-      <div>
+      <div id="write">
         <router-link to="/write">Write</router-link>
       </div>
-      <div>
+      <div id="sign-in">
         <button>sign in</button>
       </div>
-      <div>
+      <div id="started">
         <router-link to="/getstarted">
           <button>get started</button>
         </router-link>
@@ -36,6 +37,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f6ff;
 }
 
 #nav {
@@ -43,8 +45,10 @@
   height: 8%;
   padding: 10px;
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
-  background: #f3e40f;
+  background: #f3c623;
   // box-shadow: 0px 5px 15px #cccccc;
   #home {
     // flex: 5;
@@ -53,23 +57,48 @@
     font-size: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
+  #started {
+    button {
+      background-color: #10375c;
+      color: #f4f6ff;
+    }
+  }
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #10375c;
   text-decoration: none;
   padding: 1rem;
 }
 
 button {
   outline: none;
-  border: 2px solid #2c3e50;
-  width: 9.5rem;
-  height: 8vh;
+  border: 2px solid #10375c;
+  width: 9rem;
+  height: 2.5rem;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #10375c;
+}
+
+@media screen and (max-width: 850px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+  #follow,
+  #sign-in,
+  #write {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html,
+  body {
+    font-size: 11px;
+  }
 }
 </style>

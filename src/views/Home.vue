@@ -8,7 +8,9 @@
     <div id="start">
       <h1>Expand your horizon.</h1>
 
-      <button>Get started</button>
+      <button>
+        <router-link to="/getstarted">Get started</router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -41,6 +43,9 @@ export default {
   }
   button {
     margin: 25px 45%;
+    a {
+      display: block;
+    }
   }
 }
 

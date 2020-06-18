@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Signup />
     <div id="nav">
       <div id="home">
         <router-link to="/">Hieroglyphics</router-link>
@@ -25,6 +26,14 @@
   </div>
 </template>
 
+<script>
+import Signup from '@/components/Signup.vue'
+export default {
+  components: {
+    Signup
+  }
+}
+</script>
 <style lang="scss">
 *,
 *::before,

@@ -33,6 +33,16 @@ const routes = [
     path: '/getstarted',
     name: 'Getstarted',
     component: () => import('../views/Getstarted.vue')
+  },
+  {
+    path: '/post',
+    name: 'post',
+    component: () => import('../views/Post.vue')
+  },
+  {
+    path: '/categ',
+    name: 'categ',
+    component: () => import('../views/Categ.vue')
   }
 ]
 

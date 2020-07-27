@@ -36,10 +36,11 @@ export default {
 <style scoped>
 .signup {
   position: absolute;
+  top: 0;
   z-index: 10;
   width: 100%;
   /* height: 100vh; */
-  background: rgba(00, 00, 0, 0.5);
+  background: rgba(00, 00, 0, 0.6);
 }
 
 #cancel {
@@ -81,6 +82,7 @@ textarea {
   margin: 5px 10%;
 }
 button {
-  margin: 1px 45%;
+  margin: 1px auto;
+  display: block;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Signup />
+    <!-- <Signup /> -->
+    <!-- <Login /> -->
     <div id="nav">
       <div id="home">
         <router-link to="/">Hieroglyphics</router-link>
@@ -10,16 +11,21 @@
         <router-link to="/follow">Follow</router-link>
       </div>
 
-      <div id="write">
+      <!-- <div id="write">
         <router-link to="/write">Write</router-link>
-      </div>
-      <div id="sign-in">
+      </div>-->
+      <!-- <div id="sign-in">
         <button>sign in</button>
-      </div>
+      </div>-->
       <div id="started">
-        <router-link to="/getstarted">
-          <button>get started</button>
-        </router-link>
+        <div class="dropdown">
+          <button class="dropbtn">Write</button>
+          <div class="dropdown-content">
+            <a href="https://strapic-cms-db.herokuapp.com/admin " target="_blank">Admin page</a>
+            <!-- <router-link to="/getstarted">Register</router-link> -->
+            <!-- <a href="#">Link 3</a> -->
+          </div>
+        </div>
       </div>
     </div>
     <router-view />
@@ -27,14 +33,17 @@
 </template>
 
 <script>
-import Signup from '@/components/Signup.vue'
+// import Signup from '@/components/Signup.vue'
+// import Login from '@/components/Login.vue'
 export default {
   components: {
-    Signup
+    // Signup,
+    // Login
   }
 }
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 *,
 *::before,
 *::after {
@@ -50,33 +59,34 @@ export default {
 }
 
 #nav {
-  // width: 100%;
-  height: 8%;
+  width: 100%;
+  height: 10vh;
   padding: 10px;
   display: flex;
   position: sticky;
   top: 0;
   align-items: center;
-  background: #f3c623;
+  background: #10375c;
   // box-shadow: 0px 5px 15px #cccccc;
   #home {
     // flex: 5;
-    width: 60vw;
-    min-width: 30vw;
+    width: 0vw;
+    min-width: 68vw;
     font-size: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   #started {
     button {
-      background-color: #10375c;
-      color: #f4f6ff;
+      background-color: #f3c623;
+      color: #10375c;
+      font-weight: bold;
     }
   }
 }
 
 #nav a {
   font-weight: bold;
-  color: #10375c;
+  color: #f3c623;
   text-decoration: none;
   padding: 1rem;
 }
@@ -89,25 +99,59 @@ button {
 }
 
 #nav a.router-link-exact-active {
-  color: #10375c;
+  color: #f3c623;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 9rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  // z-index: 1;
+  color: #10375c;
+  background: #10375c;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+//
 @media screen and (max-width: 850px) {
   html,
   body {
     font-size: 13px;
   }
-  #follow,
+  #started,
   #sign-in,
   #write {
     display: none;
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 600px) {
   html,
   body {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html,
+  body {
+    font-size: 10px;
   }
 }
 </style>

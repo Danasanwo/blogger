@@ -1,5 +1,7 @@
 <template>
-  <h1>whatsup</h1>
+  <div class="write">
+    <iframe src="https://strapic-cms-db.herokuapp.com/admin" title="link to strapi cms"></iframe>
+  </div>
 </template>
 
 <script>
